@@ -1,13 +1,13 @@
 {%- from "freeipa/map.jinja" import client,server with context %}
 
 include:
-- openssh.server
+- openssh
 
 sssd_service:
   service.running:
     - name: sssd
     - watch_in:
-      - service: openssh_server_service
+      - service: openssh
     - watch:
       - file: sssd_conf
 
