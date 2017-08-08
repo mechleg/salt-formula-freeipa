@@ -15,7 +15,7 @@ freeipa_server_pkgs:
   file.managed:
     - contents: {{ server.ldap.password }}
     - mode: 640
-    - owner: root
+    - user: root
     {%- if pillar.get('sensu', {}).get('client', {}).get('enabled', False) %}
     - group: sensu
     - require:
