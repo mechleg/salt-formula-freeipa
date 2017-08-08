@@ -13,7 +13,7 @@ named_config:
     - name: {{ server.named_conf }}
     - source: salt://freeipa/files/named.conf
     - template: jinja
-    - owner: root
+    - user: root
     - group: named
     - mode: 640
     - require:
