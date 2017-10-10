@@ -73,21 +73,6 @@ dependency for this formula. Configure it thusly:
           command: /usr/bin/sss_ssh_authorizedkeys
           user: nobody
 
-If you wish to update DNS records using nsupdate, add:
-
-.. code-block:: yaml
-
-    freeipa:
-      client:
-        nsupdate:
-          - name: test.example.com
-            ipv4:
-              - 8.8.8.8
-            ipv6:
-              - 2a00:1450:4001:80a::1009
-            ttl: 1800
-            keytab: /etc/krb5.keytab
-
 For requesting certificates using certmonger:
 
 .. code-block:: yaml
